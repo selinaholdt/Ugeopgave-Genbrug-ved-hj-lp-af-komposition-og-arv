@@ -1,0 +1,55 @@
+@startuml
+
+class Lamp{
+- int watt
+- boolean isOn
++ Lamp(int watt)
++ int getWatt()
++ void turnOn()
++ void turnOff()
++ String toString()
+}
+
+class Window{
+- int widthCm
+- int heightCm
++ public Window(int widthCm, int heightCm)
++ int getWidthCm()
++ int getHeightCm()
++ int getAreaCm2()
++ String toString
+}
+
+class Room{
+- String name
+- ArrayList<Lamp> lamps
+- ArrayList<Window> windows
++ Room(String name)
++ void addLamp(Lamp lamp)
++ void addWindow(Window window)
++ int getLampCount()
++ int getTotalWatt()
++ int getTotalWindowArea()
++ void printRoom()
+}
+
+class Building{
+- String name
+- ArrayList<Room> rooms
++ Building(String name)
++ void addRoom(Room room)
++ int getTotalLampCount()
++ int getTotalWatt()
++ void printBuilding()
+}
+
+class Main{
++ void main()
+}
+
+Building *-- Room: has
+Room *-- Window: has
+Room *-- Lamp: has
+
+
+@enduml

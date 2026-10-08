@@ -1,0 +1,45 @@
+@startuml
+
+abstract class Animal{
+- Sting name
+- int energy
++ Animal(String name, int energy)
++ boolean isActive()
++ {abstract} int attack()
++ String toString()
+}
+
+class Lion{
++ Lion(String name, int energy)
++ int attack()
+}
+
+class Wolf{
++ Wolf(String name, int energy)
++ int attack()
+}
+
+class Rabbit{
++ Rabbit(String name, int energy)
++ int attack()
+}
+
+class Contest{
+- Animal animal1
+- Animal animal2
+- int rounds
++ Contest(Animal animal1, Animal animal2, int rounds)
++ void playRound()
++ Animal getWinner()
+}
+
+class Main{
++ void main()
+}
+
+
+Animal <|-- Lion: is
+Animal <|-- Wolf: is
+Animal <|-- Rabbit: is
+
+@enduml
