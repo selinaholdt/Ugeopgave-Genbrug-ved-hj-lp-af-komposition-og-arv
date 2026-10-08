@@ -1,1 +1,2 @@
-# Ugeopgave-Genbrug-ved-hj-lp-af-komposition-og-arv
+Selina
+seho1001@stud.ek.dk
